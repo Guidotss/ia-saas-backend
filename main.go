@@ -7,6 +7,8 @@ import (
 
 func main() {
 	configuration := config.New()
+	database := config.NewDatabase(configuration)
+
 	app := fiber.New()
 
 	app.Get("/", func(context *fiber.Ctx) error {
